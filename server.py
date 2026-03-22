@@ -4,16 +4,16 @@ import os
 
 app = Flask(__name__)
 
-# Base directory (important for Render)
+# Base directory (Render compatible)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 @app.route("/")
 def home():
-    return "Server running ✅"
+    return "Server running v2 🚀"
 
 
-# TEST route (deployment check)
+# Test route (deploy check)
 @app.route("/test123")
 def test123():
     return "WORKING OK 🚀"
