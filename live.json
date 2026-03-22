@@ -1,0 +1,87 @@
+{
+    "teams": [
+        {
+            "team": "Team5",
+            "kills": 5,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team6",
+            "kills": 3,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team7",
+            "kills": 4,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team8",
+            "kills": 2,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team9",
+            "kills": 0,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team16",
+            "kills": 5,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team11",
+            "kills": 0,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team12",
+            "kills": 2,
+            "alive": 4,
+            "finished": 0
+        },
+        {
+            "team": "Team18",
+            "kills": 4,
+            "alive": 4,
+            "finished": 0
+        }
+    ],
+    "finish": "",
+    "top_players": [
+        {
+            "name": "G4RSpiirit",
+            "team": "5",
+            "kills": 4
+        },
+        {
+            "name": "KnpwnAsHoly",
+            "team": "6",
+            "kills": 2
+        },
+        {
+            "name": "rZFaceToBiiilly",
+            "team": "16",
+            "kills": 2
+        },
+        {
+            "name": "GMFHAFZAL",
+            "team": "18",
+            "kills": 2
+        },
+        {
+            "name": "X4NaRuToZESTY",
+            "team": "5",
+            "kills": 1
+        }
+    ],
+    "show_top5": true
+}
