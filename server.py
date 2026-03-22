@@ -4,20 +4,15 @@ import os
 
 app = Flask(__name__)
 
-# Base directory (Render compatible)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 
 @app.route("/")
 def home():
     return "Server running v2 🚀"
 
-
-# Test route (deploy check)
 @app.route("/test123")
 def test123():
     return "WORKING OK 🚀"
-
 
 @app.route("/live")
 def live():
@@ -36,7 +31,6 @@ def live():
         return jsonify({"error": str(e)})
 
 
-# Local run (Render ignore karega)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
