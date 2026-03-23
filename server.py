@@ -1,31 +1,29 @@
 from flask import Flask, jsonify
-import json
-import os
 
 app = Flask(__name__)
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# 🔥 Dummy data (replace later with OCR)
+live_data = {
+    "team1": ["Scout", "Mortal", "Jonathan"],
+    "team2": ["Clutchgod", "Goblin"]
+}
 
 @app.route("/")
 def home():
     return "Server running v2 🚀"
 
-@app.route("/test123")
-def test123():
-    return "WORKING OK 🚀"
+# ✅ IMPORTANT ROUTE (missing in your case)
+@app.route("/data")
+def get_data():
+    return jsonify(live_data)
 
-@app.route("/live")
-def live():
-    try:
-        file_path = os.path.join(BASE_DIR, "live.json")
+# (optional) update data from external app
+@app.route("/update", methods=["POST"])
+def update_data():
+    global live_data
+    from flask import request
+    live_data = request.json
+    return {"status": "updated"}
 
-        if not os.path.exists(file_path):
-            return jsonify({"error": "live.json file not found"})
-
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        return jsonify(data)
-
-    except Exception as e:
-        return jsonify({"error": str(e)})
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
